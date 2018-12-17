@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import currencyFormatter from "currency-formatter";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -21,6 +22,13 @@ const ReuseableList = (props) => {
             </ListItemSecondaryAction>
         </ListItem>
     )
+}
+
+ReuseableList.propTypes = {
+    rate: PropTypes.number,
+    value: PropTypes.number,
+    name: PropTypes.string,
+    deleteList: PropTypes.func
 }
 
 export default ReuseableList;
